@@ -360,7 +360,10 @@
             <span style="font-size:18px;">🏠</span> Overview
         </button>
         <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.05); margin: 15px 0;">
-        <div id="nav-links"></div>
+        <div id="nav-links" style="flex-grow: 1; overflow-y: auto;"></div>
+        <div style="margin-top: auto; padding-top: 20px;">
+            <button class="action-btn" style="width: 100%; background: #e53e3e;" onclick="resetProgress()">Reset Saved Progress</button>
+        </div>
     </div>
 
     <div class="main-content" id="content">
@@ -476,7 +479,8 @@
         ];
 
         // Array to track which topics the user has checked
-        var checkedTopics = [];
+        var savedTopics = localStorage.getItem('semesterProgress');
+        var checkedTopics = savedTopics ? JSON.parse(savedTopics) : [];
 
         // Check the time of day and show a greeting message
         function setGreeting() {
@@ -711,15 +715,32 @@
         // Add or remove a topic from the checked list
         function toggleTopic(topicId, subjectId, isChecked) {
             if (isChecked) {
-                checkedTopics.push(topicId);
+                if (checkedTopics.indexOf(topicId) === -1) {
+                    checkedTopics.push(topicId);
+                }
             } else {
                 var index = checkedTopics.indexOf(topicId);
                 if (index !== -1) {
                     checkedTopics.splice(index, 1);
                 }
             }
+            
+            // Save immediately to browser localStorage
+            localStorage.setItem('semesterProgress', JSON.stringify(checkedTopics));
+            
             // Re-render the subject page to update progress
             showSubject(subjectId);
+        }
+
+        // Permanently wipe out all saved progress
+        function resetProgress() {
+            var confirmed = confirm("Are you sure you want to completely reset all your saved progress? This action cannot be undone.");
+            if (confirmed) {
+                checkedTopics = [];
+                localStorage.removeItem('semesterProgress');
+                // Re-load the overview page to reflect 0% everywhere
+                showOverview();
+            }
         }
 
         // Start the app
