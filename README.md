@@ -1,7 +1,8 @@
-# 🎓 Smart Semester Dashboard
+# 🎓 Semester Syllabus Progress Dashboard
 
-A responsive and interactive student productivity dashboard developed using **HTML, CSS, and JavaScript**.  
-This project is designed to help students efficiently manage their academic semester by tracking attendance, assignments, subject progress, upcoming deadlines, and personal study goals — all in one clean interface.
+An interactive and responsive academic dashboard developed using **HTML, CSS, and Vanilla JavaScript** to help students systematically track their semester syllabus completion subject-wise.
+
+This web application is specially designed for managing multiple university subjects, monitoring lecture progress, marking completed topics, and visualizing overall semester preparation in one centralized interface.
 
 ---
 
@@ -13,16 +14,31 @@ This project is designed to help students efficiently manage their academic seme
 
 ---
 
-## ✨ Key Features
+## ✨ Core Features
 
-- 📅 Semester Progress Monitoring
-- ✅ Daily Task & Assignment Tracker
-- 📚 Subject-wise Study Planner
-- ⏰ Upcoming Deadline Reminder
-- 📊 Attendance / Progress Visualization
-- 🎯 Productivity Focus Section
-- 💻 Responsive Modern User Interface
-- ⚡ Real-Time Interactive Dashboard Experience
+- 📊 Overall Semester Completion Tracker
+- 📚 Subject-wise Syllabus Monitoring
+- ✅ Checkbox-Based Topic Completion System
+- 📈 Automatic Real-Time Progress Calculation
+- 🧭 Interactive Sidebar Subject Navigation
+- 🎨 Animated Glassmorphism Dashboard Interface
+- 📱 Fully Responsive Layout
+- ⚡ Dynamic Lecture-wise Unit Expansion
+
+---
+
+## 📖 Subjects Included
+
+The dashboard currently contains detailed syllabus tracking for:
+
+- Computer Programming in C (24CS001)
+- Operating System & Linux Fundamentals (25CS028)
+- Differential Equations & Transformations (23AM002)
+- Front-end Engineering-I (25CS009)
+- Modern & Computational Physics (24PH001)
+- Environmental Science (23ES001)
+
+Each subject is divided into lecture modules and individual topics for accurate semester preparation tracking.
 
 ---
 
@@ -30,56 +46,89 @@ This project is designed to help students efficiently manage their academic seme
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla JS)
-- GitHub Pages for Deployment
+- Vanilla JavaScript
+- DOM Manipulation
+- Dynamic Progress Bar Logic
+- GitHub Pages Deployment
 
 ---
 
-## 🎯 Purpose of Project
+## 🎯 Project Objective
 
-The objective of this project is to solve a common student problem:  
-managing multiple academic responsibilities in one semester without confusion.
+University students often face difficulty in managing lengthy syllabi across multiple subjects before examinations.
 
-This dashboard helps users:
+This project solves that issue by providing:
 
-- stay organized,
-- monitor important deadlines,
-- improve daily productivity,
-- and maintain semester performance effectively.
+- a centralized semester syllabus manager,
+- a progress visualization system,
+- topic completion tracking,
+- and subject-wise preparation analysis.
+
+It helps students understand exactly:
+
+> what has been completed,  
+> what remains pending,  
+> and how much total semester preparation is done.
+
+---
+
+## ⚙️ Functional Modules
+
+### 1. Overview Dashboard
+Displays:
+- total semester completion percentage,
+- all subjects with individual progress bars,
+- direct navigation buttons.
+
+### 2. Subject Detail Section
+Each subject contains:
+- course code,
+- evaluation weightage,
+- lecture ranges,
+- topic checklists,
+- live progress update.
+
+### 3. Completion Logic
+Whenever a topic checkbox is marked:
+- subject progress updates instantly,
+- semester progress recalculates automatically.
 
 ---
 
 ## 📂 Project Structure
 
-Semester-dashboard/
-│── index.html
+Semester-dashboard/  
+│── index.html  
 │── README.md
 
 ---
 
-## ▶️ How to Run Locally
+## ▶️ How to Run
 
-1. Clone this repository
-2. Open the project folder
-3. Run `index.html` in any browser
+1. Download or clone repository
+2. Open `index.html` in browser
+3. Start marking completed lecture topics
+4. Monitor your semester preparation progress live
 
 ---
 
 ## 👨‍💻 Developed By
 
 **Parth Sharma**  
-B.Tech CSE Student | Front-End Developer
+B.Tech Computer Science Engineering Student  
+Front-End Development Project
 
 ---
 
-## ⭐ Future Improvements
+## 🔮 Future Scope
 
-- Database Integration
-- User Login System
-- Dark/Light Theme Toggle
-- Cloud Data Saving
-- Mobile App Version
+- Local Storage Data Saving
+- Login/User Profile System
+- Attendance Integration
+- Exam Countdown Timer
+- Cloud Progress Synchronization
+- Mobile Application Version
 
 ---
 
-> This project demonstrates front-end development skills, problem-solving ability, and practical academic productivity solution design.
+> This project demonstrates practical front-end engineering, DOM-based state handling, academic problem-solving, and user-centered dashboard design.
